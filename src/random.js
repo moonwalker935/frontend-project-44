@@ -1,4 +1,5 @@
-export default () => {
-    let randomNumber = Math.round(Math.random() * 10);
-    return randomNumber;
+export default (min, max) => {
+    const minCeiled = Math.ceil(min);
+    const maxFloored = Math.floor(max);
+    return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled);
 };

@@ -6,27 +6,25 @@ import gameLogic from "../src/index.js";
 
 const userName = greeting();
 
-console.log('Answer "yes" if the number is even, otherwise answer "no".\n');
+console.log('What is the result of the expression?');
 
-const isEven = (number) => {
-    if (number % 2 === 0) {
-        return 'yes';
-    } else {
-        return 'no';
-    }
+const getExpression = () => {
+    let firstOperand = getRandom(0, 100);
+    let secondOperand = getRandom(0, 100);
+    const randomExpression = [(`${firstOperand} + ${secondOperand}`), (`${firstOperand} - ${secondOperand}`), (`${firstOperand} * ${secondOperand}`)];
+    const expression = randomExpression[getRandom(0, 3)];
+    return expression;
 };
 
-const brainEven = () => {
+const brainCalc = () => {
     let correct = 0;
     let question = 0;
-    let answer = 0
+    let answer = 0;
     let result = 0;
-    
     while (correct < 3) {
-        question = getRandom(0, 10);
-        answer = isEven(question);
+        question = getExpression();
+        answer = eval(question)
         result = gameLogic(userName, question, answer);
-
         if (result === 'Correct!') {
             correct += 1;
         } else {
@@ -34,7 +32,8 @@ const brainEven = () => {
         }
         console.log(result);
     }
+    
     return console.log(`Congratulations, ${userName}!`);
 };
 
-brainEven();
+brainCalc();
