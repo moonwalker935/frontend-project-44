@@ -4,9 +4,8 @@ import {
     greeting,
     getGameText,
     getUserName,
-    getUserInput,
     getRandom,
-} from '../src/index.js';
+} from '../../src/index.js';
 
 
 greeting();

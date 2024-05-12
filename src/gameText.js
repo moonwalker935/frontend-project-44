@@ -1,11 +1,11 @@
-import { getUserInput } from './answer.js';
+import { getUserInput } from './userInputs.js';
 
 
 export const getGameText = (userName, questionText, expected) => {
     console.log('Question:', questionText);
 
     const userInput = getUserInput();
-    const numberUserInput = Number(userInput);
+    const numberUserInput = Number(userInput) || false;
     const userAnswer = typeof numberUserInput === 'number'
         ? numberUserInput
         : userInput;
