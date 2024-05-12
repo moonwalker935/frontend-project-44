@@ -1,17 +1,4 @@
-import answerInput from "./answer.js";
-
-export default (userName, question, answer) => {
-    let result = '';
-    
-    console.log("Question: " + question);
-
-    let userAnswer = answerInput();
-    userAnswer = Number(userAnswer) || userAnswer;
-
-    if (userAnswer === answer) {
-        result = 'Correct!';       
-    } else {
-        result = `'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'.\nLet's try again, ${userName}\n`;
-    }
-    return result;
-};
+export { greeting } from './greeting.js';
+export { getGameText } from './gameText.js';
+export { getUserName, getUserInput } from './userInputs.js';
+export { getRandom } from './random.js';
