@@ -41,7 +41,7 @@ const runGameGcd = () => {
         if (result === 'Correct!') {
             countRightAnswers += 1;
         } else {
-            countRightAnswers = 0;
+            return;
         }
     }
 
