@@ -33,7 +33,7 @@ const runGameGcd = () => {
     while (countRightAnswers < 3) {
         const randomNumber1 = getRandom(1, 100);
         const randomNumber2 = getRandom(1, 100);
-        const twoRandomNumbers = `${randomNumber1}, ${randomNumber2}`;
+        const twoRandomNumbers = `${randomNumber1} ${randomNumber2}`;
         const expected = gcd(randomNumber1, randomNumber2);
         const result = getGameText(userName, twoRandomNumbers, expected);
         console.log(result);
