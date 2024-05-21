@@ -12,5 +12,5 @@ export const getGameText = (userName, questionText, expected) => {
 
     return userAnswer === expected
         ? 'Correct!'
-        : `'${userAnswer}' is wrong answer ;(. Correct answer was '${expected}'.\nLet's try again, ${userName}`;
+        : `'${userAnswer}' is wrong answer ;(. Correct answer was '${expected}'.\nLet's try again, ${userName}!`;
 };
