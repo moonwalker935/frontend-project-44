@@ -37,7 +37,7 @@ const runGameProgression = () => {
   while (countRightAnswers < 3) {
     const progression = getProgression();
     const expected = progression.pop();
-    const progressionText = progression.join(" ");
+    const progressionText = progression.join(' ');
     
     const result = getGameText(userName, progressionText, expected);
     console.log(result);
