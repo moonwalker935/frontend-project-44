@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
 import {
-    greeting,
-    getGameText,
-    getUserName,
-    getRandom
+  greeting,
+  getGameText,
+  getUserName,
+  getRandom
 } from '../../src/index.js';
 
 
@@ -16,22 +16,22 @@ console.log('Answer "yes" if the number is even, otherwise answer "no".');
 const isEven = number => number % 2 === 0 ? 'yes' : 'no';
 
 const runEvenGame = () => {
-    let countRightAnswers = 0;
+  let countRightAnswers = 0;
 
-    while (countRightAnswers < 3) {
-        const randomNumber = getRandom(0, 10);
-        const expected = isEven(randomNumber);
-        const result = getGameText(userName, randomNumber, expected);
-        console.log(result);
+  while (countRightAnswers < 3) {
+    const randomNumber = getRandom(0, 10);
+    const expected = isEven(randomNumber);
+    const result = getGameText(userName, randomNumber, expected);
+    console.log(result);
 
-        if (result === 'Correct!') {
-            countRightAnswers += 1;
-        } else {
-            return;
-        }
+    if (result === 'Correct!') {
+      countRightAnswers += 1;
+    } else {
+      return;
     }
+  }
 
-    console.log(`Congratulations, ${userName}!`);
+  console.log(`Congratulations, ${userName}!`);
 };
 
 runEvenGame();
