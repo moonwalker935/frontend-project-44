@@ -4,7 +4,7 @@ import {
   greeting,
   getGameText,
   getUserName,
-  getRandom
+  getRandom,
 } from '../../src/index.js';
 
 greeting();
@@ -26,9 +26,7 @@ const runGamePrime = () => {
 
   while (countRightAnswers < 3) {
     const number = getRandom(0, 100);
-    const expected = isPrime(number) === true 
-      ? "yes" 
-      : "no";
+    const expected = isPrime(number) === true ? 'yes' : 'no';
     const result = getGameText(userName, number, expected);
     console.log(result);
 

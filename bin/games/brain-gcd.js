@@ -4,9 +4,8 @@ import {
   greeting,
   getGameText,
   getUserName,
-  getRandom
+  getRandom,
 } from '../../src/index.js';
-
 
 greeting();
 const userName = getUserName();
@@ -16,15 +15,14 @@ console.log('Find the greatest common divisor of given numbers.');
 const gcd = (number1, number2) => {
   let a = number1;
   let b = number2;
-  while (a !== 0 & b !== 0) {
+  while (a !== 0 && b !== 0) {
     if (a > b) {
-      a = a % b;
+      a %= b;
     } else {
-      b = b % a;
+      b %= a;
     }
   }
-    
-  return a+b;
+  return a + b;
 };
 
 const runGameGcd = () => {

@@ -1,6 +1,6 @@
 import { getUserInput } from './userInputs.js';
 
-export const getGameText = (userName, questionText, expected) => {
+export default (userName, questionText, expected) => {
   console.log('Question:', questionText);
 
   const userInput = getUserInput();

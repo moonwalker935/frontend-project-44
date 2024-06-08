@@ -1,10 +1,9 @@
 #!/usr/bin/env node
 
 import {
-	greeting,
-	getUserName
+  greeting,
+  getUserName,
 } from '../../src/index.js';
-
 
 greeting();
 getUserName();

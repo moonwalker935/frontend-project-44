@@ -4,7 +4,7 @@ import {
   greeting,
   getGameText,
   getUserName,
-  getRandom
+  getRandom,
 } from '../../src/index.js';
 
 greeting();
@@ -30,7 +30,6 @@ const getProgression = () => {
   return progression;
 };
 
-
 const runGameProgression = () => {
   let countRightAnswers = 0;
 
@@ -38,7 +37,6 @@ const runGameProgression = () => {
     const progression = getProgression();
     const expected = progression.pop();
     const progressionText = progression.join(' ');
-    
     const result = getGameText(userName, progressionText, expected);
     console.log(result);
 

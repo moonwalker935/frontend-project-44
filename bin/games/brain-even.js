@@ -4,16 +4,15 @@ import {
   greeting,
   getGameText,
   getUserName,
-  getRandom
+  getRandom,
 } from '../../src/index.js';
-
 
 greeting();
 const userName = getUserName();
 
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
-const isEven = number => number % 2 === 0 ? 'yes' : 'no';
+const isEven = (number) => (number % 2 === 0 ? 'yes' : 'no');
 
 const runEvenGame = () => {
   let countRightAnswers = 0;

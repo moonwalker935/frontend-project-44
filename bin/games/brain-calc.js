@@ -4,7 +4,7 @@ import {
   greeting,
   getGameText,
   getUserName,
-  getRandom
+  getRandom,
 } from '../../src/index.js';
 
 greeting();
@@ -21,22 +21,23 @@ const getExpression = () => {
 };
 
 const brainCalc = () => {
-	let countRightAnswers = 0;
+  let countRightAnswers = 0;
 
-	while (countRightAnswers < 3) {
-		const question = getExpression();
-		const expected = eval(question);
-		const result = getGameText(userName, question, expected);
-		console.log(result);
+  while (countRightAnswers < 3) {
+    const question = getExpression();
+    // eslint-disable-next-line
+    const expected = eval(question);
+    const result = getGameText(userName, question, expected);
+    console.log(result);
 
-		if (result === 'Correct!') {
-			countRightAnswers += 1;
-		} else {
-			return;
-		}
-	}
-	
-	console.log(`Congratulations, ${userName}!`);
+    if (result === 'Correct!') {
+      countRightAnswers += 1;
+    } else {
+      return;
+    }
+  }
+
+  console.log(`Congratulations, ${userName}!`);
 };
 
 brainCalc();
