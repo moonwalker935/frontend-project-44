@@ -24,7 +24,8 @@ const isPrime = (num) => {
 const runGamePrime = () => {
   let countRightAnswers = 0;
 
-  while (countRightAnswers < 3) {
+  const maxGameSteps = 3;
+  while (countRightAnswers < maxGameSteps) {
     const number = getRandom(0, 100);
     const expected = isPrime(number) === true ? 'yes' : 'no';
     const result = getGameText(userName, number, expected);

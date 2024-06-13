@@ -23,7 +23,8 @@ const getExpression = () => {
 const brainCalc = () => {
   let countRightAnswers = 0;
 
-  while (countRightAnswers < 3) {
+  const maxGameSteps = 3;
+  while (countRightAnswers < maxGameSteps) {
     const question = getExpression();
     // eslint-disable-next-line
     const expected = eval(question);

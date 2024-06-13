@@ -17,7 +17,8 @@ const isEven = (number) => (number % 2 === 0 ? 'yes' : 'no');
 const runEvenGame = () => {
   let countRightAnswers = 0;
 
-  while (countRightAnswers < 3) {
+  const maxGameSteps = 3;
+  while (countRightAnswers < maxGameSteps) {
     const randomNumber = getRandom(0, 10);
     const expected = isEven(randomNumber);
     const result = getGameText(userName, randomNumber, expected);

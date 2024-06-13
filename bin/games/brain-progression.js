@@ -33,7 +33,8 @@ const getProgression = () => {
 const runGameProgression = () => {
   let countRightAnswers = 0;
 
-  while (countRightAnswers < 3) {
+  const maxGameSteps = 3;
+  while (countRightAnswers < maxGameSteps) {
     const progression = getProgression();
     const expected = progression.pop();
     const progressionText = progression.join(' ');

@@ -12,7 +12,7 @@ const userName = getUserName();
 
 console.log('Find the greatest common divisor of given numbers.');
 
-const gcd = (number1, number2) => {
+const findGreatestCommonDivisor = (number1, number2) => {
   let a = number1;
   let b = number2;
   while (a !== 0 && b !== 0) {
@@ -32,7 +32,7 @@ const runGameGcd = () => {
     const randomNumber1 = getRandom(1, 100);
     const randomNumber2 = getRandom(1, 100);
     const twoRandomNumbers = `${randomNumber1} ${randomNumber2}`;
-    const expected = gcd(randomNumber1, randomNumber2);
+    const expected = findGreatestCommonDivisor(randomNumber1, randomNumber2);
     const result = getGameText(userName, twoRandomNumbers, expected);
     console.log(result);
 
